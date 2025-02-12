@@ -1,0 +1,52 @@
+{
+  "date": {
+    "created_at": "2025-01-27",
+    "updated_at": "2025-01-27"
+  },
+  "descriptions": {
+    "app_description": "A message formatter bot that processes incoming messages and sends back formatted responses.",
+    "app_logo": "https://example.com/message-formatter-logo.png",
+    "app_name": "Message Formatter",
+    "app_url": "https://example.com/message-formatter",
+    "background_color": "#0000FF"
+  },
+  "target_url": "https://system-integration.telex.im/messageformatter",
+    "events": [
+      "Receive messages from Telex channels.",
+      "Format messages based on predefined templates or logic.",
+      "Send formatted responses back to the channel.",
+      "Log message formatting activity for auditing purposes."
+    ]
+  },
+  "settings": [
+    {
+      "label": "responseTemplate",
+      "type": "textarea",
+      "description": "Define the template for formatting messages.",
+      "required": True,
+      "default": "Hello, {{username}}! You said: {{message}}"
+    },
+    {
+      "label": "enableLogging",
+      "type": "checkbox",
+      "description": "Enable logging of all formatted messages.",
+      "default": "Yes",
+      "required": True
+    },
+    {
+      "label": "maxMessageLength",
+      "type": "number",
+      "description": "Set the maximum length for incoming messages to format.",
+      "default": 500,
+      "required": True
+    },
+    {
+      "label": "notifyOnError",
+      "type": "checkbox",
+      "description": "Notify admins if a formatting error occurs.",
+      "default": "No",
+      "required": True
+    }
+  ],
+  "is_active": True
+}
